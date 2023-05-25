@@ -10,7 +10,7 @@ import java.util.List;
 public interface UserDAO {
     List<User> findAllUsers();
 
-    User getUserById(long id);
+    User getUserInfo(long id);
 
     void save(User user);
 

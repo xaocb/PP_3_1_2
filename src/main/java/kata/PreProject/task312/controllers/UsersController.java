@@ -35,8 +35,8 @@ public class UsersController {
 
     @GetMapping("/{id}")
     public String getUserById(@PathVariable("id") int id, Model model) {
-        model.addAttribute("user", userService.getUserById(id));
-        return "pages/getUserById";
+        model.addAttribute("user", userService.getUserInfo(id));
+        return "pages/getUserInfo";
     }
 
     @GetMapping("/add")
@@ -56,7 +56,7 @@ public class UsersController {
 
     @GetMapping("/{id}/edit")
     public String edit(Model model, @PathVariable("id") int id) {
-        model.addAttribute("user", userService.getUserById(id));
+        model.addAttribute("user", userService.getUserInfo(id));
         return "pages/edit";
     }
 
